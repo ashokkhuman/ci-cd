@@ -21,6 +21,13 @@ pipeline {
                 '''
             }
         }
+        stage('configure docker containers using ansible') {
+            steps {
+                sh '''
+                    pwd
+                '''
+            }
+        }
     }
     
 }
