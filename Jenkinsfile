@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sh '''
                     pwd
-                    sh ansible-playbook aplaybooksapp2/ping-playbook.yml -i aplaybooksapp2/inventory
+                    ansible-playbook aplaybooksapp2/ping-playbook.yml -i aplaybooksapp2/inventory
                 '''
             }
         }
