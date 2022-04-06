@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sh '''
                     pwd
-                    ansible-playbook aplaybooksapp2/ping-playbook.yml -i aplaybooksapp2/inventory
+                    export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook aplaybooksapp2/ping-playbook.yml -i aplaybooksapp2/inventory
                 '''
             }
         }
